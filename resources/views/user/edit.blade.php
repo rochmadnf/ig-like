@@ -11,9 +11,10 @@
           <div class="card-body">
             <form method="POST" action="/user/update">
               @csrf
+              @method('PUT')
 
               <x-input label="Username" name="username" otherAttr="autofocus" :object="$user"/>
-              <x-input label="Email" name="email" type="email" :object="$user"/>
+              <x-input label="Fullname" name="fullname" :object="$user"/>
               <x-input label="Biodata" name="bio" :object="$user"/>
 
               <p>
